@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 import argparse
-import numpy as np
+# import numpy as np
 import os
-from AIPowerMeter.deep_learning_power_measure.power_measure import experiment, parsers
-from datetime import datetime
+# from AIPowerMeter.deep_learning_power_measure.power_measure import experiment, parsers
+# from datetime import datetime
 import warnings
-import pandas as pd
-import pickle
+# import pandas as pd
+# import pickle
 
 warnings.filterwarnings("ignore")
 
@@ -27,11 +27,13 @@ parser.add_argument('--name_exe', help='Executable name', default='cusparse_bloc
 args = parser.parse_args()
 
 size_matrices = [
-                # 512, 
+                # 128,
+                512, 
+                # 1024,
                 # 2048, 
-                4096
+                # 4096
                 ]
-number_blocks = 32
+number_blocks = 1
 block_sizes = [16]
 dim = 16
 number_repetitions = vars(args)['repetitions']

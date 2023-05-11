@@ -1,1 +1,1 @@
-g++ -Wall cusparse_blocked_ell_spmm.c -o cusparse_blocked_ell_spmm.o -I /usr/local/cuda-12.0/include/ -L /usr/local/cuda-12.0/lib64 -lcudart -lcuda -lcusparse -lcublas -fopenmp -g -O2 -std=c++11
+g++ -Wall cusparse_blocked_ell_spmm.c -o cusparse_blocked_ell_spmm.o -I /usr/local/cuda-11.6/include/ -L /usr/local/cuda-11.6/lib64 -lcudart -lcuda -lcusparse -lcublas -fopenmp -g -O2 -std=c++11

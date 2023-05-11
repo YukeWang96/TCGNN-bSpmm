@@ -14,8 +14,8 @@ for line in fp:
         data = line.split("=")[1].rstrip("\n").lstrip()
         print(data)
         dataset_li.append(data)
-    if " Bmp Device |" in line:
-        time = line.split("|")[1].rstrip("\n").lstrip()
+    else:
+        time = line.split(" ")[-1].rstrip("\n").lstrip()
         print(time)
         time_li.append(time.strip("ms"))
 fp.close()
@@ -25,4 +25,4 @@ fout.write("Dataset, Time (ms)\n")
 for data, time in zip(dataset_li, time_li):
     fout.write("{},{}\n".format(data, time))
 fout.close()
-print("\n\n=>Check [{}] for results\n\n".format(sys.argv[1].strip(".log")+".csv"))
+# print("\n\n=>Check [{}] for results\n\n".format(sys.argv[1].strip(".log")+".csv"))
